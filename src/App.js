@@ -1,6 +1,6 @@
 import logo from "./logo.png";
 import "./App.css";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 function App() {
   const [amount, setAmount] = useState(0);
@@ -49,7 +49,7 @@ function App() {
     let installmentAmount = (amount / 4).toFixed(2);
     setInstallment(installmentAmount);
   };
-  console.log({ installment });
+
   return (
     <div className="App">
       <header className="App-header">
@@ -62,7 +62,7 @@ function App() {
             id="amount"
             placeholder="$ "
           />
-          <input type="submit" value="Submit" />
+          <input type="submit" value="submit" />
         </form>
         {installment > 0 && <CreatePaymentPlan amount={installment} />}
       </header>
