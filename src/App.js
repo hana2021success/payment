@@ -4,7 +4,7 @@ import React, { useState } from "react";
 
 function App() {
   const [amount, setAmount] = useState(0);
-  const [installment, setInstallment] = useState(0);
+  const [installment, setInstallment] = useState(null);
   const dataObject = [
     { id: 1, order: "First", date: "2020" },
     {
@@ -53,7 +53,7 @@ function App() {
           />
           <input type="submit" value="submit" />
         </form>
-        {installment > 0 && <CreatPaymentPlan amount={installment} />}
+        {installment && <CreatPaymentPlan amount={installment} />}
       </header>
     </div>
   );
