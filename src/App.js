@@ -15,8 +15,7 @@ function App() {
     { id: 3, order: "Third", date: "2020" },
     { id: 4, order: "Forth", date: "2020" },
   ];
-
-  const creatPaymentPlan = ({ amount }) => {
+  const CreatPaymentPlan = ({ amount }) => {
     return dataObject.map((item, index) => (
       <li key={index}>
         <div>{item.data}</div>
@@ -25,7 +24,6 @@ function App() {
       </li>
     ));
   };
-
   const handleOnChange = (event) => {
     const amount = event.target.value;
     setAmount(amount);
@@ -53,7 +51,7 @@ function App() {
           />
           <input type="submit" value="submit" />
         </form>
-        {installment > 0 && <createPaymentPlan amount={installment} />}
+        {installment > 0 && <CreatPaymentPlan amount={installment} />}
       </header>
     </div>
   );
