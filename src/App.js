@@ -3,12 +3,6 @@ import "./App.css";
 import React, { useState } from "react";
 
 function App() {
-  const [amount, setAmount] = useState(0);
-  const [installment, setInstallment] = useState(0);
-
-  // useEffect(() => {
-  //   createPaymentPlan(amount);
-  // }, [installment]);
   /**
    * This function calculates the installments for a purchase plan.
    * Assume there are always four installments.
@@ -17,7 +11,8 @@ function App() {
    * dollar amount and clicks submit.
    * @param {number} amount the amount the customer intends to purchase
    */
-
+  const [amount, setAmount] = useState(0);
+  const [installment, setInstallment] = useState(0);
   const dataObject = [
     { id: 1, order: "First", date: "2020" },
     {
